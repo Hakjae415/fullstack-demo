@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
     res.send("Hello World")
 })
 
+app.use('/api', require("./api"));
+
 app.listen(PORT, (err) => {
     !err ? console.log(`Listening on PORT ${PORT}`) : console.log("Something went wrong")
 })

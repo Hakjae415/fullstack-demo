@@ -20,11 +20,11 @@ model Train {
 }
 
 model Conductor {
-  id        Int      @id @default(autoincrement())
-  name      String   @db.VarChar(255)
-  yearHired DateTime
-  train     Train    @relation(fields: [trainId], references: [id])
-  trainId   Int      @unique
+  id        Int    @id @default(autoincrement())
+  name      String @db.VarChar(255)
+  yearHired Int
+  train     Train  @relation(fields: [trainId], references: [id])
+  trainId   Int    @unique
 }
 
 model Station {

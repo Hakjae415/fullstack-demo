@@ -13,7 +13,7 @@ CREATE TABLE "Train" (
 CREATE TABLE "Conductor" (
     "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL,
-    "yearHired" TIMESTAMP(3) NOT NULL,
+    "yearHired" INTEGER NOT NULL,
     "trainId" INTEGER NOT NULL,
 
     CONSTRAINT "Conductor_pkey" PRIMARY KEY ("id")
